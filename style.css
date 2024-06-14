@@ -50,6 +50,7 @@ body{
 
 #latlong {
     display: flex;
+    gap: 20px;
 }
 
 #formulario input {
