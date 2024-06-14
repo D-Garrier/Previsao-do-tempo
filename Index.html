@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div id="navbar">
+      <h1>DncWeather</h1>  
+      <ul>
+        <li>
+            Endereços
+        </li>
+        <li>
+            Previsão do tempo
+        </li>
+      </ul>
+    </div>
+    <div id="menu">
+        <p id="informacional">Descubra Mais com Precisão: <br> 
+        Previsões do Tempo e endereços <br>
+        em tempo real.</p>
+        <img src="imagens/nuvem.svg" id="nuvem" alt="" width="150px">
+    </div>
+    <div id="formulario">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Primeiro Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Insira seu primeiro nome:">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email" placeholder="Insira seu e-mail">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Digite o CEP:</label>
+            <input type="cep" class="form-control" id="CEP" placeholder="Insira o CEP">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Digite a latitude e longitude para saber a previsão:</label>
+                <div id="latlong">
+                    <input type="latitude" class="form-control" id="latitude" placeholder="Latitude">
+                    <input type="longitude" class="form-control" id="longitude" placeholder="Longitude">
+                </div>
+            <button onclick="getAddressByCep();getPrevisao()" type="submit">Acessar</button>
+          </div>
+    </div>
+    <div id="endereco">
+      <div id="titleCep">
+        <h1>Resultado da busca por CEP:</h1>
+        <img src="imagens/gps.svg" alt="" width="100px">
+      </div>
+      <div id="headerCep">
+        <p>Logradouro/nome</p>
+        <p>Bairro/Distrito</p>
+        <p>Localidade/UF</p>
+      </div>
+      <div id="resulCep">
+        <p id="rua"></p>
+        <p id="bairro"></p>
+        <p id="estado"></p>
+      </div>
+    </div>
+    <div id="previsao">
+      <div id="titlePrev">
+        <h1>Previsão do tempo na região:</h1>
+        <img src="imagens/previsao.svg" alt="" width="150px">
+      </div>
+      <div id="resultPrev">
+        <p id="resposta"></p>
+      </div>
+    </div>
+    <footer>
+      <div id="footer-content">
+          <a href="#termos" class="footer-link">Termos de Uso</a>
+          <span>|</span>
+          <a href="#politica" class="footer-link">Política de Privacidade</a>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
